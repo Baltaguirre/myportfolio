@@ -16,6 +16,7 @@ function App() {
           rel="noopener noreferrer"
         >
          Welcome to my Porfolio!
+         Please come in!
         </a>
       </header>
     </div>
