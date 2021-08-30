@@ -1,0 +1,55 @@
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    overflow-y: hidden;
+ 
+}
+
+.container h1 {
+    color: white;
+    font-family: 'VT323', monospace;
+    font-weight: normal;
+    font-size:52px;
+    position: absolute;
+    display: flex;
+    margin-left: 5%;
+    align-items: center;
+    margin-top: 2%;
+    letter-spacing: 1px;
+    
+}
+
+.container ul {
+    
+    color: white;
+    font-family: 'VT323', monospace;
+    font-size:30px;
+    font-weight: normal;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-left:2%;
+    justify-content:end;
+    align-items: flex-start;
+    margin-top: 10%;
+    list-style-type:none;
+    text-decoration:dashed;
+}
+
+
+.container li {
+    color: white;
+    margin-left: 10%;
+    text-align: center;
+    text-decoration: underline rgb(0, 0, 0);
+    letter-spacing: 1px;
+}   
+
+.proyects{
+   display:flex;
+   border: 1px solid white;
+   margin-top:15%;
+   width:50%;
+   height:50%; 
+}
