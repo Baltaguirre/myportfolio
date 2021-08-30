@@ -3,8 +3,25 @@
     width: 100vw;
     background-color: black;
     overflow-y: hidden;
- 
+    background-image: url(../../public/moon.png);
+    background-size:100%;
+   
+    -webkit-animation: backgroundScroll 25s linear infinite;
+animation: backgroundScroll 25s linear infinite;
 }
+
+@-webkit-keyframes backgroundScroll {
+from {background-position: 0 0;}
+to {background-position: -800px 0;}
+}
+        
+@keyframes backgroundScroll {
+from {background-position: 0 0;}
+to {background-position: -800px 0;}
+}
+ 
+ 
+
 
 .containerAbout h1 {
     color: white;

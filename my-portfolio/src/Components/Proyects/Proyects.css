@@ -3,7 +3,21 @@
     width: 100vw;
     background-color: black;
     overflow-y: hidden;
- 
+    background-image: url(../../public/moon.png);
+    background-size:100%;
+   
+    -webkit-animation: backgroundScroll 25s linear infinite;
+animation: backgroundScroll 25s linear infinite;
+}
+
+@-webkit-keyframes backgroundScroll {
+from {background-position: 0 0;}
+to {background-position: -800px 0;}
+}
+        
+@keyframes backgroundScroll {
+from {background-position: 0 0;}
+to {background-position: -800px 0;}
 }
 
 .container h1 {
@@ -29,10 +43,10 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    margin-left:2%;
+    margin-left:3.8%;
     justify-content:end;
     align-items: flex-start;
-    margin-top: 10%;
+    margin-top: 5%;
     list-style-type:none;
     text-decoration:dashed;
 }
@@ -44,6 +58,15 @@
     text-align: center;
     text-decoration: underline rgb(0, 0, 0);
     letter-spacing: 1px;
+}   
+.container p {
+    color: white;
+    margin-left: 27%;
+    margin-top:5%;
+    text-align: center;
+    text-decoration: underline rgb(0, 0, 0);
+    letter-spacing: 1px;
+
 }   
 
 .proyects{

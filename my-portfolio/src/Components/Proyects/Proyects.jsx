@@ -6,12 +6,15 @@ export default function Proyects(){
 
     return (
         <div className="container">
-            <Link to='/home' >
-            <h1>/:home</h1>
+            <Link to='/' >
+            <h1>/:Baltasar Aguirre</h1>
             </Link>
             <div>
                 <ul>
-                    <li>/:proyects</li>
+                    <Link to='/home'> 
+                    <li>└/:home</li>
+                    </Link>
+                    <p>└/:proyects</p>
                 </ul>
                 </div>
                 <div className='proyects'>
