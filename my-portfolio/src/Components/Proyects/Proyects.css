@@ -2,7 +2,7 @@
     height: 100vh;
     width: 100vw;
     background-color: black;
-    overflow-y: hidden;
+    overflow-x: hidden;
     background-image: url(../../public/moon.png);
     background-size:100%;
    
@@ -25,7 +25,7 @@ to {background-position: -800px 0;}
     font-family: 'VT323', monospace;
     font-weight: normal;
     font-size:52px;
-    position: absolute;
+    position: fixed;
     display: flex;
     margin-left: 5%;
     align-items: center;
@@ -56,23 +56,33 @@ to {background-position: -800px 0;}
     color: white;
     margin-left: 10%;
     text-align: center;
-    text-decoration: underline rgb(0, 0, 0);
+    text-decoration: none;
     letter-spacing: 1px;
 }   
 .container p {
     color: white;
     margin-left: 27%;
-    margin-top:5%;
+    margin-top:-10%;
     text-align: center;
-    text-decoration: underline rgb(0, 0, 0);
+    text-decoration: none;
     letter-spacing: 1px;
 
 }   
 
 .proyects{
    display:flex;
+   flex-direction: column;
+   align-items: center;
    border: 1px solid white;
    margin-top:15%;
+   margin-left:45%;
    width:50%;
    height:50%; 
+}
+.image{
+    width: 25%;
+    height: 60%;
+    margin-left: 70%;
+    margin-top: 3%;
+    margin-bottom:-24%;
 }

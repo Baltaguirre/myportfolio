@@ -3,7 +3,8 @@
     height: 100vh;
     width: 100vw;
     background-color: black;
-    overflow-y: hidden;
+    overflow: hidden;
+    
     background-image: url(../../public/moon.png);
     background-size:100%;
    
@@ -33,12 +34,14 @@ h1 {
     align-items: center;
     margin-top: 2%;
     letter-spacing: 1px;
+    text-decoration: none;
     
 }
 
 .containerHome 
 ul {
-    
+    height: 10%;
+    width: 5%;
     color: white;
     font-family: 'VT323', monospace;
     font-size:30px;
@@ -46,29 +49,45 @@ ul {
     position: absolute;
     display: flex;
     flex-direction: column;
-    margin-left:3.5%;
-    justify-content:end;
+    margin-left:3.9%;
+    justify-content:flex-start;
     align-items: flex-start;
-    margin-top: 5%;
+    margin-top: 6%;
     list-style-type:none;
-    text-decoration:dashed;
+    text-decoration: none;
 }
 
 
 .containerHome 
 li {
     color: white;
-    margin-left: 10%;
     text-align: center;
-    text-decoration: underline rgb(0, 0, 0);
+    text-decoration: none;
     letter-spacing: 1px;
 }   
 .containerHome 
 p {
     color: white;
-    margin-left: 30%;
-    margin-top:5%;
+    margin-left: 20%;
+    margin-top:1%;
     text-align: center;
-    text-decoration: underline rgb(0, 0, 0);
+    text-decoration: none;
     letter-spacing: 1px; 
 }
+.home{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid white;
+    margin-top:10%;
+    margin-left:35%;
+    width:60%;
+    height:40%; 
+ }
+
+ .home img{
+     width:50%;
+     height:100%;
+     margin-left:40%;
+     margin-top: 25%;
+ }

@@ -3,21 +3,21 @@
     width: 100vw;
     background-color: black;
     overflow: hidden;
-    background-image: url(../../public/moon.png);
-    background-size:100%;
-   
-    -webkit-animation: backgroundScroll 25s linear infinite;
-animation: backgroundScroll 25s linear infinite;
+    background-image: url(../../public/moon2.png);
+    background-size:cover;
+   background-repeat: no-repeat;
+    -webkit-animation: backgroundScroll 45s linear infinite;
+animation: backgroundScroll 45s linear infinite;
 }
 
 @-webkit-keyframes backgroundScroll {
 from {background-position: 0 0;}
-to {background-position: -800px 0;}
+to {background-position: -100000px -1000px;}
 }
         
 @keyframes backgroundScroll {
 from {background-position: 0 0;}
-to {background-position: -800px 0;}
+to {background-position: -100000px -1000px;}
 }
  
 
@@ -42,22 +42,51 @@ to {background-position: -800px 0;}
     font-family: 'VT323', monospace;
     font-size:30px;
     font-weight: normal;
-    position: absolute;
+    position:fixed;
     display: flex;
     flex-direction: column;
-    margin-left:3.5%;
+    margin-left:2.7%;
     justify-content:end;
-    align-items: flex-start;
-    margin-top: 5%;
+    align-items: end;
+    margin-top: 6%;
     list-style-type:none;
-    text-decoration:dashed;
+    text-decoration:none;
+    text-align: flex-end;
 }
 
 
 .containerLand li {
     color: white;
-    margin-left: 10%;
-    text-align: center;
-    text-decoration: underline rgb(0, 0, 0);
+    margin-left: 15%;
+    text-decoration:none;
     letter-spacing: 1px;
 }   
+
+.astronauta {
+   
+    animation: bounce 1s infinite alternate;
+    -webkit-animation: bounce 1s infinite alternate;
+  }
+  @keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-15px);
+    }
+  }
+  @-webkit-keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-15px);
+    }
+  }
+  
+ #animated-example{
+     margin-top:5%;
+     margin-left:30%;
+     width:40%;
+     height:50%;
+ }
