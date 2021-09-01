@@ -1,0 +1,93 @@
+.containerHome 
+{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    overflow: hidden;
+    
+    background-image: url(../../public/moon.png);
+    background-size:100%;
+   
+    -webkit-animation: backgroundScroll 25s linear infinite;
+animation: backgroundScroll 25s linear infinite;
+}
+
+@-webkit-keyframes backgroundScroll {
+from {background-position: 0 0;}
+to {background-position: -800px 0;}
+}
+        
+@keyframes backgroundScroll {
+from {background-position: 0 0;}
+to {background-position: -800px 0;}
+}
+
+.containerHome 
+h1 {
+    color: white;
+    font-family: 'VT323', monospace;
+    font-weight: normal;
+    font-size:52px;
+    position: absolute;
+    display: flex;
+    margin-left: 5%;
+    align-items: center;
+    margin-top: 2%;
+    letter-spacing: 1px;
+    text-decoration: none;
+    
+}
+
+.containerHome 
+ul {
+    height: 10%;
+    width: 5%;
+    color: white;
+    font-family: 'VT323', monospace;
+    font-size:30px;
+    font-weight: normal;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-left:3.9%;
+    justify-content:flex-start;
+    align-items: flex-start;
+    margin-top: 6%;
+    list-style-type:none;
+    text-decoration: none;
+}
+
+
+.containerHome 
+li {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+}   
+.containerHome 
+p {
+    color: white;
+    margin-left: 20%;
+    margin-top:1%;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px; 
+}
+.home{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid white;
+    margin-top:10%;
+    margin-left:35%;
+    width:60%;
+    height:40%; 
+ }
+
+ .home img{
+     width:50%;
+     height:100%;
+     margin-left:40%;
+     margin-top: 25%;
+ }
