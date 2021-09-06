@@ -1,70 +1,78 @@
-import react, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useHistory } from 'react-router-dom';
+import './Navbar.css'
 
-export default function Nabvar(){
-    const [homeClicked, setHomeClicked] = useState(false)
-    const[landingClicked, setLandingClicked] = useState(false)
-    const linkStyle = {
-        marginBottom: '-17px',
-        textDecoration: "none",
-        marginLeft:'0.2px'
+export default function Nabvar() {
+
+    const [homeClicked, setHomeClicked] = useState(false);
+    const [aboutClicked, setAboutClicked] = useState(false);
+    let history = useHistory()
+    
+    const handleHomeClick = () => {
        
-      };
-      const linkStyleHome = {
-        marginBottom: '-17px',
-        textDecoration: "none",
-        marginLeft:'2px'
        
-      };
-      
-      function handleHomeClick(event){
-        if(event){
-            setHomeClicked(true)
+     
+            console.log('hanlde')
+           setHomeClicked(true)
            
-        } 
+       
+        if(!homeClicked) history.push('/home')
+
+    }
+
+
+    console.log(homeClicked)
+    const handleAboutClick = (event) => {
+        if (event) {
+            setAboutClicked(true)
         }
-        function handleLandingClick(event){
-            if(event){
-                setLandingClicked(true)
-               
-            } 
-            }
+    }
+
+useEffect(() => {
+    setHomeClicked(true)
+},[homeClicked])
+
+
     return (
-        homeClicked ? 
-            <div className="containerHome">
-        <Link to='/' style={linkStyle} >
-        <h1>/:Baltasar Aguirre</h1>
-        </Link>
-        <div>
-            <ul>
-                <li>└/:home</li>
-                <Link to='/proyects' style={linkStyle}>
-                <p>└/:proyects</p>
-                </Link>
-                <li>│</li>
-                <li>│</li>
-                <Link to='/about' style={linkStyle}>
-                <li>└/:about</li>
-                </Link>
-            </ul>
-            </div>
-    </div> : landingClicked ?
-        <div className="containerLand">
-            <Link to='/' >
-            <h1>/:Baltasar Aguirre</h1>
+        !homeClicked ? 
+        <div className="containerLanding" >
+                <h1>/:Baltasar AguirreAAAA</h1>
+                <div>
+                  <button onClick={(event) => handleHomeClick(event)}>
+                        └/:homeeee
+                        </button>
+                    <p>│</p>
+                    <Link to='/about' onClick={() => handleAboutClick()} >
+                        └/:about
+                    </Link>
+
+                </div>
+            </div> 
+
+
+            : <div className="containerHome">
+            <Link to='/'>
+                <h1>/:Baltasar AguirreAE</h1>
             </Link>
             <div>
                 <ul>
-                    <Link to='/home' style={linkStyleHome}  onClick={handleHomeClick} >
                     <li>└/:home</li>
+                    <Link to='/proyects' >
+                        <p>└/:proyects</p>
                     </Link>
                     <li>│</li>
-                    <Link to='/about' style={linkStyle}>
-                    <li>└/:about</li>
+                    <li>│</li>
+                    <Link to='/about' >
+                        <li>└/:about</li>
                     </Link>
                 </ul>
-                </div>
-        </div> : null
-    
+            </div>
+        </div>
+
+
+
     )
+
+
+
 }
