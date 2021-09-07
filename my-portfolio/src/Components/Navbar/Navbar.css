@@ -1,5 +1,7 @@
-
-.containerLanding
+.containerNav {
+    overflow-y: hidden;
+}
+.containerNav 
 h1 {
     color: white;
     font-family: 'VT323', monospace;
@@ -15,7 +17,7 @@ h1 {
     
 }
 
-.containerLanding
+.containerNav 
 ul {
     height: 10%;
     width: 5%;
@@ -35,14 +37,17 @@ ul {
 }
 
 
-.containerLanding
+.containerNav 
 li {
     color: white;
-    text-align: center;
+    text-align: start;
     text-decoration: none;
     letter-spacing: 1px;
+    margin-top: -30%;
+    margin-left: 1.5%;
+   
 }   
-.containerLanding
+.containerNav 
 p {
     color: white;
     margin-left: 20%;
@@ -52,3 +57,26 @@ p {
     letter-spacing: 1px; 
 }
 
+
+.containerNav 
+h1 {
+    color: white;
+    font-family: 'VT323', monospace;
+    font-weight: normal;
+    font-size:52px;
+    position: absolute;
+    display: flex;
+    margin-left: 5%;
+    align-items: center;
+    margin-top: 2%;
+    letter-spacing: 1px;
+    text-decoration: none;
+    
+}
+
+.homeLi{
+  
+   
+   font-size: 45px;
+   
+}

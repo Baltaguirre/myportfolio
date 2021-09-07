@@ -1,78 +1,116 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css'
 
 export default function Nabvar() {
 
-    const [homeClicked, setHomeClicked] = useState(false);
-    const [aboutClicked, setAboutClicked] = useState(false);
-    let history = useHistory()
+    const location = useLocation()
     
-    const handleHomeClick = () => {
-       
-       
-     
-            console.log('hanlde')
-           setHomeClicked(true)
-           
-       
-        if(!homeClicked) history.push('/home')
-
+    
+    const linkStyle = {
+        textDecoration: 'none',
+        color:'white',
+    }
+    const linkStyleAbHome = {
+        textDecoration: 'none',
+       marginTop:'45px',
+       color:'white',
+       marginLeft:'-3px'
+    }
+    const linkStyleAbout = {
+        textDecoration: 'none',
+        color:'white',
+        marginTop:'-50px',
+        marginBottom: '30px',
+        marginLeft:'13px'
     }
 
-
-    console.log(homeClicked)
-    const handleAboutClick = (event) => {
-        if (event) {
-            setAboutClicked(true)
-        }
+    const linkStyleLand = {
+        color: 'white',
+        textDecoration: 'none',
+        alignItems:'start',
+        marginLeft:'1px',
+        marginTop:'-5px',
+    }
+    const  linkStyleLandAb = {
+        color: 'white',
+        textDecoration: 'none',
+        alignItems:'start',
+        marginLeft:'1px',
+        marginTop:'5px',
     }
 
-useEffect(() => {
-    setHomeClicked(true)
-},[homeClicked])
-
-
+    const linkStyleProyects = {
+        textDecoration: 'none',
+        color:'white',
+        marginTop:'-5px'
+       
+    }
+   
     return (
-        !homeClicked ? 
-        <div className="containerLanding" >
-                <h1>/:Baltasar AguirreAAAA</h1>
+        location.pathname === '/home' ?
+            <div className="containerNavHome">
+                <Link to='/'  >
+                    <h1>/:Baltasar Aguirre</h1>
+                </Link>
                 <div>
-                  <button onClick={(event) => handleHomeClick(event)}>
-                        └/:homeeee
-                        </button>
-                    <p>│</p>
-                    <Link to='/about' onClick={() => handleAboutClick()} >
-                        └/:about
-                    </Link>
-
+                    <ul>
+                        <li className='homeLi'>└/:home</li>
+                        <Link to='/proyects' style={linkStyle} >
+                            <p>└/:proyects</p>
+                        </Link>
+                         <li className='homeLi'>│</li>
+                         <li className='homeLi'>│</li>
+                         <li className='homeLi'>│</li>
+                        <Link to='/about' style={linkStyleAbHome} >
+                            └/:about
+                        </Link>
+                    </ul>
                 </div>
-            </div> 
-
-
-            : <div className="containerHome">
-            <Link to='/'>
-                <h1>/:Baltasar AguirreAE</h1>
-            </Link>
-            <div>
-                <ul>
-                    <li>└/:home</li>
-                    <Link to='/proyects' >
-                        <p>└/:proyects</p>
-                    </Link>
-                    <li>│</li>
-                    <li>│</li>
-                    <Link to='/about' >
-                        <li>└/:about</li>
-                    </Link>
-                </ul>
             </div>
-        </div>
-
-
-
+            : location.pathname === '/about' ?
+                <div className="containerNav" >
+                    <Link to='/'>
+                        <h1>/:Baltasar Aguirre</h1>
+                    </Link>
+                    <div>
+                        <ul>
+                            <Link to='/home' style={linkStyleAbout} >
+                            └/:home
+                            </Link>
+                            <li>│</li>
+                            <li>└/:about</li>
+                        </ul>
+                    </div>
+                </div>
+                : location.pathname === '/proyects' ?
+                    <div className="containerNav">
+                        <Link to='/' >
+                            <h1>/:Baltasar Aguirre</h1>
+                        </Link>
+                        <div>
+                            <ul>
+                                <Link to='/home' style={linkStyleProyects}>
+                                    └/:home
+                                </Link>
+                                <p>└/:proyects</p>
+                            </ul>
+                        </div>
+                    </div>
+                    : location.pathname === '/' ?
+                        <div className="containerNav" >
+                            <h1>/:Baltasar Aguirre</h1>
+                            <div>
+                                <ul>
+                                    <Link to='/home' style={linkStyleLand}>
+                                    └/:home
+                                    </Link>
+                                    <li>│</li>
+                                    <Link to='/about' style={linkStyleLandAb}>
+                                    └/:about
+                                    </Link>
+                                </ul>
+                            </div>
+                        </div> : null
     )
-
-
-
 }

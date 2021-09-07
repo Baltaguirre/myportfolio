@@ -4,7 +4,7 @@ import Landing from './Components/Landing/Landing'
 import Home from './Components/Home/Home.jsx'
 import Proyects from './Components/Proyects/Proyects'
 import About from './Components/About/About'
-import Navbar from './Components/Navbar/Navbar'
+
 import './App.css';
 
 function App() {

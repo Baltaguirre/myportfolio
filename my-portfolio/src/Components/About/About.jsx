@@ -4,7 +4,7 @@ import stack from './Stackpixel1.png'
 import Nabvar from '../Navbar/Navbar';
 import astronaut from './astronauta4.png'
 
-export default function Landing() {
+export default function About() {
 
     return (
         <div className="containerAbout">

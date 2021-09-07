@@ -23,6 +23,21 @@ to {background-position: -10000px -1000px;}
 
 
 
+
+
+.containerLand li {
+  color: white;
+    margin-left: 7%;
+    margin-top: -50%;
+    margin-bottom:-10%;
+    text-decoration:none;
+    letter-spacing: 1px;
+    align-items: start;
+   
+  
+}   
+
+
 .astronauta {
    
     animation: bounce 1s infinite alternate;

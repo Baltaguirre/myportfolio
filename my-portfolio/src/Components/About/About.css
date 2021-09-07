@@ -58,13 +58,14 @@ to {background-position: -800px 0;}
 
 .containerAbout li {
     color: white;
-    margin-left: 10%;
+    margin-left: 7%;
     margin-top: -50%;
-    margin-bottom:-2%;
+    margin-bottom:-15%;
     text-decoration:none;
     letter-spacing: 1px;
     align-items: start;
-    padding:0%;
+    font-size: 45px;
+    
 }   
 
 .containerAbout p{
