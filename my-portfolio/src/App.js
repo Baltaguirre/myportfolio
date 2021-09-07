@@ -1,21 +1,21 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import React, { Fragment } from "react";
 import Landing from './Components/Landing/Landing'
-import Home from './Components/Home/Home'
+import Home from './Components/Home/Home.jsx'
 import Proyects from './Components/Proyects/Proyects'
 import About from './Components/About/About'
-import Navbar from './Components/Navbar/Navbar'
+
 import './App.css';
 
 function App() {
   return (
  
     <Router>
-      <Route path="/">
-          <Navbar />
-        </Route>
 
-      <Switch>
+      <Switch> 
+    
+     
+     
 
         <Route exact path="/">
           <Landing />
@@ -30,6 +30,7 @@ function App() {
         <Route exact path="/about">
           <About />
         </Route>
+        
         </Switch>
       </Router>
     
