@@ -47,10 +47,10 @@ to {background-position: -800px 0;}
     position: absolute;
     display: flex;
     flex-direction:column-reverse;
-    margin-left:3%;
+    margin-left:4%;
     justify-content:flex-start;
     align-items:start;
-    margin-top: 6%;
+    margin-top: 3%;
     margin-bottom: 5%;
     list-style-type:none;
     text-decoration:none;
@@ -58,7 +58,7 @@ to {background-position: -800px 0;}
 
 .containerAbout li {
     color: white;
-    margin-left: 7%;
+    margin-left: -3%;
     margin-top: -50%;
     margin-bottom:-15%;
     text-decoration:none;
@@ -90,6 +90,7 @@ to {background-position: -800px 0;}
     margin-top:7%;
     width:50%;
     height:50%; 
+    background-color: hsla(123, 46%, 28%, 0.329)
  }
 
  .stack{

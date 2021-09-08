@@ -1,8 +1,10 @@
 .containerNav {
     overflow-y: hidden;
+    
 }
 .containerNav 
 h1 {
+    position: fixed;
     color: white;
     font-family: 'VT323', monospace;
     font-weight: normal;

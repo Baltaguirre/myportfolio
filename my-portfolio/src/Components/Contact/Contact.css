@@ -1,0 +1,78 @@
+
+.containerContact{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    overflow-x: hidden;
+    background-image: url(../../public/moon.png);
+    background-size:100%;
+   
+    -webkit-animation: backgroundScroll 25s linear infinite;
+animation: backgroundScroll 25s linear infinite;
+}
+
+@-webkit-keyframes backgroundScroll {
+from {background-position: 0 0;}
+to {background-position: -800px 0;}
+}
+        
+@keyframes backgroundScroll {
+from {background-position: 0 0;}
+to {background-position: -800px 0;}
+}
+.containerContact ul{
+    margin-top:10%;
+   
+}
+.containerContact li{
+    margin-top:-10%;
+   margin-left:-1%;
+}
+.containerContact p{
+    margin-top:15%;
+   
+}
+
+.contact{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    padding:5%;
+    align-items:center;
+    margin-left:35%;
+    border: 5px solid white;
+    margin-top:7%;
+    width:50%;
+    height:60%; 
+    background-color: hsla(157, 50%, 25%, 0.329);
+ }
+ 
+ .contact img{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin-top: -30%;
+     margin-left: 10%;
+     width:65%;
+     height:150%;
+ }
+ .contact a{
+    font-family:'VT323', monospace;
+    font-size:30px;
+    font-weight: normal;
+    color: white;
+    text-decoration: none;
+    padding: 1%;
+    height: 10%;
+    margin-left:3%;
+ }
+ .containerContact p{
+    color: white;
+    margin-left: 30%;
+    margin-top:-2%;
+    text-align: center;
+    font-family:'VT323', monospace;
+    font-size:50px;
+    font-weight: normal;
+    
+}
