@@ -1,8 +1,8 @@
 import React from 'react';
 import './About.css';
-import stack from './Stackpixel1.png'
+import stack from './Stackpixel1.png';
 import Nabvar from '../Navbar/Navbar';
-import astronaut from './astronauta4.png'
+import astronaut from './astronauta4.png';
 
 export default function About() {
 

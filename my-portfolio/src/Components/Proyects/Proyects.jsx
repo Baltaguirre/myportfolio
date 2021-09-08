@@ -10,10 +10,14 @@ export default function Proyects() {
         <div className='containerProyects'>
        <Navbar/>
        <img src={image} alt='astronauta'/>
-       <div className='proyects'>
-     
+       <div className='proyectsOne'>
+        <h2>hola</h2>
+        </div>
+        <div className='proyectsTwo'>
+          <h2>djadaks</h2>
+        </div>
         </div>
         
-        </div>
+        
       )
     }
