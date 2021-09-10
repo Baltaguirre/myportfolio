@@ -4,8 +4,8 @@ import Landing from './Components/Landing/Landing'
 import Home from './Components/Home/Home.jsx'
 import Proyects from './Components/Proyects/Proyects'
 import About from './Components/About/About'
+import Contact from './Components/Contact/Contact'
 
-import './App.css';
 
 function App() {
   return (
@@ -24,13 +24,15 @@ function App() {
         <Route exact path="/home">
           <Home />
         </Route>
-        <Route exact path="/proyects">
+        <Route  path="/proyects">
           <Proyects />
         </Route>
         <Route exact path="/about">
           <About />
         </Route>
-        
+        <Route exact path="/contact">
+          <Contact />
+        </Route>
         </Switch>
       </Router>
     
