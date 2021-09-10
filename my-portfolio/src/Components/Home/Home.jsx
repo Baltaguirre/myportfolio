@@ -12,7 +12,10 @@ export default function Home() {
    <Navbar/>
 
       <div className='home'>
-        <p>Hello & welcome to my Portfolio!</p>
+        <h2>Hello & welcome to my Portfolio!</h2>
+        <p>If you're looking for what i've been doing, step into the /proyects section.</p>
+        <p>In the /about section you'll find some information about me, my stack & also my contact channels. </p>
+        <p>Hope you enjoy the little journey & thanks for passing by! </p> 
         </div>
         <img src={pixel} alt='astronauta' />
     </div>
