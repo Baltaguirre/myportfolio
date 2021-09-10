@@ -40,8 +40,8 @@ to {background-position: -10000px -1000px;}
 
 .astronauta {
    
-    animation: bounce 1s infinite alternate;
-    -webkit-animation: bounce 1s infinite alternate;
+    animation: bounce 2s infinite alternate;
+    -webkit-animation: bounce 2s infinite alternate;
   }
   @keyframes bounce {
     from {
@@ -62,7 +62,7 @@ to {background-position: -10000px -1000px;}
   
  #animated-example{
      margin-top:10%;
-     margin-left:38%;
+     margin-left:35%;
      width:30%;
      height:60%;
  }

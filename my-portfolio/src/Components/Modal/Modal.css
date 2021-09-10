@@ -1,0 +1,22 @@
+.style{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.637);
+    color: #FFF;
+    font-size: 40px;
+}
+.ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 2000ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+    opacity: 0;
+}

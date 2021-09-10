@@ -1,6 +1,6 @@
 import React from 'react';
 import './Landing.css';
-import pixel from './astronauta.png'
+import pixel from './astronauta2.png'
 import Navbar from '../Navbar/Navbar.jsx'
 
 export default function Landing() {
