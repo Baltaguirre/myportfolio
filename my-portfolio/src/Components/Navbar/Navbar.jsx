@@ -2,114 +2,85 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css'
 
-export default function Nabvar() {
-
+export default function Nabvar({ playNavbar,stopNavbar }) {
     const location = useLocation()
-
-
-    const linkStyle = {
-        textDecoration: 'none',
-        color: 'white',
-    }
-    const linkStyleAbHome = {
-        textDecoration: 'none',
-        marginTop: '45px',
-        color: 'white',
-        marginLeft: '-3px'
-    }
-    const linkStyleAbout = {
-        textDecoration: 'none',
-        color: 'white',
-        marginTop: '-50px',
-        marginBottom: '-10px',
-        marginLeft: '-1px'
-    }
-    const linkStyleAboutContact = {
-        textDecoration: 'none',
-        color: 'white',
-        marginTop: '-10px',
-        marginBottom: '-20px',
-        marginLeft: '42px'
-    }
-
-
-    const linkStyleLand = {
-        color: 'white',
-        textDecoration: 'none',
-        alignItems: 'start',
-        marginLeft: '1px',
-        marginTop: '-5px',
-    }
-    const linkStyleLandAb = {
-        color: 'white',
-        textDecoration: 'none',
-        alignItems: 'start',
-        marginLeft: '1px',
-        marginTop: '5px',
-    }
-
-    const linkStyleProyects = {
-        textDecoration: 'none',
-        color: 'white',
-        marginTop: '-5px',
-        position:'fixed'
-
-    }
-    const linkStyleContactAbout = {
-        textDecoration: 'none',
-        color: 'white',
-        marginTop: '-65px',
-        
-
-    }
-
+   
     return (
         location.pathname === '/home' ?
-            <div className="containerNavHome">
+            <div >
                 <Link to='/'  >
                     <h1>/:Baltasar Aguirre</h1>
                 </Link>
                 <div>
                     <ul>
-                        <li className='homeLi'>└/:home</li>
-                        <Link to='/proyects' style={linkStyle} >
-                            <p>└/:proyects</p>
+                        <li >└/:home</li>
+                        <Link
+                            to='/proyects'
+                            className='homeLinkProyects'
+                            data-text='└/:proyects'
+                            onMouseEnter={playNavbar}
+                            onMouseLeave={stopNavbar}>
+                            └/:proyects
                         </Link>
-                        <li className='homeLi'>│</li>
-                        <li className='homeLi'>│</li>
-                        <li className='homeLi'>│</li>
-                        <Link to='/about' style={linkStyleAbHome} >
+                        <li >│</li>
+                        <li >│</li>
+                        <li >│</li>
+                        <li >│</li>
+                        <li >│</li>
+                        <Link
+                            to='/about'
+                            className='homeLinkAbout'
+                            data-text='└/:about'
+                            onMouseEnter={playNavbar}
+                            onMouseLeave={stopNavbar}>
                             └/:about
                         </Link>
                     </ul>
                 </div>
             </div>
             : location.pathname === '/about' ?
-                <div className="containerNav" >
+                <div >
+                   {/*  {speakerButton()} */}
                     <Link to='/'>
                         <h1>/:Baltasar Aguirre</h1>
                     </Link>
                     <div>
-                        <ul>
-                            <Link to='/home' style={linkStyleAbout} >
-                                └/:home
-                            </Link>
-                            <li>│</li>
-                            <li>└/:about</li>
-                            <Link to='/contact' style={linkStyleAboutContact} >
+                        <ul>  
+                            <Link
+                                to='/contact'
+                                className='aboutNavLinkContact'
+                                data-text='└/:contactMe'
+                                onMouseEnter={playNavbar}
+                                onMouseLeave={stopNavbar}>
                                 └/:contactMe
                             </Link>
+                             <li>└/:about</li>
+                             <li>|</li>
+                          <Link
+                                to='/home'
+                                className='aboutNavLinkHome'
+                                data-text='└/:home'
+                                onMouseEnter={playNavbar}
+                                onMouseLeave={stopNavbar}>
+                                └/:home
+                            </Link>   
                         </ul>
                     </div>
                 </div>
                 : location.pathname === '/proyects' ?
                     <div className="containerNav">
+                        {/* {speakerButton()} */}
                         <Link to='/' >
                             <h1>/:Baltasar Aguirre</h1>
                         </Link>
                         <div>
                             <ul>
-                                <Link to='/home' style={linkStyleProyects}>
+                                <Link
+                                    to='/home'
+                                    className='proyectsLinkHome'
+                                    data-text='└/:home'
+                                    onMouseEnter={playNavbar}
+                                    onMouseLeave={stopNavbar}>
                                     └/:home
                                 </Link>
                                 <p>└/:proyects</p>
@@ -118,26 +89,42 @@ export default function Nabvar() {
                     </div>
                     : location.pathname === '/' ?
                         <div className="containerNav" >
+                           {/*  {speakerButton()} */}
                             <h1>/:Baltasar Aguirre</h1>
                             <div>
                                 <ul>
-                                    <Link to='/home' style={linkStyleLand}>
-                                        └/:home
+                                    <Link
+                                        to='/about'
+                                        className='landLinkAbout'
+                                        data-text='└/:about'
+                                        onMouseEnter={playNavbar}
+                                        onMouseLeave={stopNavbar}
+                                        onMouseClick={stopNavbar}>
+                                        └/:about
                                     </Link>
                                     <li>│</li>
-                                    <Link to='/about' style={linkStyleLandAb}>
-                                        └/:about
+                                    <Link to='/home'
+                                        className='landLinkHome'
+                                        data-text='└/:home'
+                                        onMouseEnter={playNavbar}
+                                        onMouseLeave={stopNavbar}>
+                                        └/:home
                                     </Link>
                                 </ul>
                             </div>
                         </div> : location.pathname === '/contact' ?
                             <div className="containerNav" >
+                                {/* {speakerButton()} */}
                                 <Link to='/'>
                                     <h1>/:Baltasar Aguirre</h1>
                                 </Link>
                                 <div>
                                     <ul>
-                                        <Link to='/about' style={linkStyleContactAbout} >
+                                        <Link to='/about'
+                                            className='contactNavLinkAb'
+                                            data-text='└/:about'
+                                            onMouseEnter={playNavbar}
+                                            onMouseLeave={stopNavbar} >
                                             └/:about
                                         </Link>
                                         <p>└/:contactMe</p>
