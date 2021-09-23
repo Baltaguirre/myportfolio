@@ -1,14 +1,17 @@
 import React from 'react';
 import './About.css';
-import stack from './Stackpixel1.png';
+import stack from '../../public/About/Stackpixel1.png';
+import astronaut from '../../public/About/astronauta4.png';
 import Nabvar from '../Navbar/Navbar';
-import astronaut from './astronauta4.png';
 
-export default function About() {
+
+export default function About({ button, playNavbar }) {
 
     return (
         <div className="containerAbout">
-            <Nabvar />
+            {button}
+            <Nabvar 
+            playNavbar={playNavbar}/>
             <img src={astronaut} alt='astronauta' className='astronaut' />
             <div className='about'>
                 <p>Full Stack Developer based in Córdoba Argentina.</p>
