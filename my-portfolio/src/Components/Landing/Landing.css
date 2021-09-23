@@ -20,11 +20,6 @@ from {background-position: 0 0;}
 to {background-position: -10000px -1000px;}
 }
  
-
-
-
-
-
 .containerLand li {
   color: white;
     margin-left: 7%;
@@ -36,33 +31,32 @@ to {background-position: -10000px -1000px;}
    
   
 }   
-
+.astronauta:hover{
+  animation: bounce 0.5s infinite alternate;
+  box-shadow: 5px 12px 15px rgb(159, 160, 167);
+}
 
 .astronauta {
-   
-    animation: bounce 2s infinite alternate;
-    -webkit-animation: bounce 2s infinite alternate;
+border-radius: 50%;
+  animation: bounce 2s infinite alternate;
+  
   }
   @keyframes bounce {
     from {
-      transform: translateY(0px);
-    }
-    to {
       transform: translateY(-15px);
     }
-  }
-  @-webkit-keyframes bounce {
-    from {
-      transform: translateY(0px);
-    }
     to {
-      transform: translateY(-15px);
+      transform: translateY(-35px);
     }
   }
   
+
  #animated-example{
-     margin-top:10%;
-     margin-left:35%;
+     margin-top:7%;
+     margin-left:37%;
      width:30%;
      height:60%;
+     cursor: pointer;
+     border-radius: 100%;
+   
  }
