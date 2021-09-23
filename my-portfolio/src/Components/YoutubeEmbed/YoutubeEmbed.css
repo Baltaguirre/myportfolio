@@ -1,26 +1,16 @@
-.video-responsive {
-  margin-left: 0.5%;
-  height: 53vh;
-  width: 55vw;
-}
 
 .video-responsive iframe {
   left: 38%;
-  top: 130%;
   height: 50%;
   width: 55%;
   position:absolute;
 }
 
-.video-responsive2{
-  margin-left: 0.5%;
-  height: 53vh;
-  width: 55vw;
-}
+
 .video-responsive2 iframe{
   left: 38%;
-  top: 35%;
-  height: 50%;
+  top: 37%;
+  height: 55%;
   width: 55%;
   position:absolute;
 }

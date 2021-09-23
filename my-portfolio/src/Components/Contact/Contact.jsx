@@ -1,13 +1,13 @@
 import React from 'react';
 import Navbar from '../Navbar/Navbar';
 import './Contact.css';
-import linkedin from './linkedin.png';
-import gmail from './gmail.png';
-import github from './github.png'
+import linkedin from '../../public/Contact/linkedin.png';
+import gmail from '../../public/Contact/gmail.png';
+import github from '../../public/Contact/github.png'
 
 
 
-export default function Contact(){
+export default function Contact({ button, playNavbar }){
     const gmailStyle = {
         height:'100%',
         marginLeft:'15%'
@@ -22,7 +22,9 @@ export default function Contact(){
     }
     return (
         <div className="containerContact">
-            <Navbar/>
+            {button}
+            <Navbar
+            playNavbar={playNavbar}/>
             <div className="contact">
                <a href="https://www.linkedin.com/in/baltasar-aguirre-fullstack/" target="blank">
                     <img src={linkedin} alt="linkedin" style={linkedinStyle}/>LinkedIn</a>

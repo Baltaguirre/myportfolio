@@ -1,84 +1,530 @@
+/* container*/
+
 .containerNav {
-    overflow-y: hidden;
-    
-}
-.containerNav 
-h1 {
-    position: fixed;
-    color: white;
-    font-family: 'VT323', monospace;
-    font-weight: normal;
-    font-size:52px;
-    position: absolute;
-    display: flex;
-    margin-left: 5%;
-    align-items: center;
-    margin-top: 2%;
-    letter-spacing: 1px;
-    text-decoration: none;
-    
+  overflow-y: hidden;
+  color: white;
+  width: 10px;
+  display: contents;
 }
 
-.containerNav 
-ul {
-    height: 10%;
-    width: 5%;
-    color: white;
-    font-family: 'VT323', monospace;
-    font-size:30px;
-    font-weight: normal;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    margin-left:3.9%;
-    justify-content:flex-start;
-    align-items: flex-start;
-    margin-top: 6%;
-    list-style-type:none;
-    text-decoration: none;
+.containerNav ul {
+  height: 10%;
+  width: 5%;
+  color: white;
+  font-family: 'VT323', monospace;
+  font-size: 30px;
+  font-weight: normal;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  margin-left: 3.9%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 6%;
+  list-style-type: none;
+  text-decoration: none;
 }
 
-
-.containerNav 
-li {
-    color: white;
-    text-align: start;
-    text-decoration: none;
-    letter-spacing: 1px;
-    margin-top: -30%;
-    margin-left: 1.5%;
-   
-}   
-.containerNav 
-p {
-    color: white;
-    margin-left: 20%;
-    margin-top:1%;
-    text-align: center;
-    text-decoration: none;
-    letter-spacing: 1px; 
+.containerNav li {
+  color: white;
+  text-align: start;
+  text-decoration: none;
+  letter-spacing: 1px;
+  margin-top: -85%;
+  margin-left: -1.3%;
 }
 
-
-.containerNav 
-h1 {
-    color: white;
-    font-family: 'VT323', monospace;
-    font-weight: normal;
-    font-size:52px;
-    position: absolute;
-    display: flex;
-    margin-left: 5%;
-    align-items: center;
-    margin-top: 2%;
-    letter-spacing: 1px;
-    text-decoration: none;
-    
+.containerNav p {
+  color: white;
+  margin-left: 20%;
+  margin-top: -1%;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1px;
 }
 
-.homeLi{
+.containerNav h1 {
+  color: white;
+  font-family: 'VT323', monospace;
+  font-weight: normal;
+  font-size: 52px;
+  position: absolute;
+  display: flex;
+  margin-left: 5%;
+  align-items: center;
+  margin-top: -2%;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.speaker {
+  height: 40px;
+  width: 50px;
+  overflow: hidden;
+  display: inline-block;
+  background-color: hsla(157, 50%, 25%, 0.329);
+  margin-top: 2.5%;
+  margin-left: 95%;
+  border: 1px solid white;
+}
+
+.speaker img {
+  display: block;
+  width: 28px;
+  height: 28px;
+  background: rgba(36, 209, 74, 0.74);
+  cursor: pointer;
+  border-radius: 50%;
+  margin-left: 12%;
+}
+
+.speaker img:last-child {
+  display: block;
+  width: 28px;
+  height: 28px;
+  background: red;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-left: 12%;
+}
+
+.speaker img:hover {
+  width: 35px;
+  height: 30px;
+  margin-left: 5%;
+}
+
+/* location '/home' */
+a.homeLinkAbout {
+  text-decoration: none;
+  margin-top: 60%;
+  color: white;
+  margin-left: -3px;
+}
+
+a.homeLinkAbout:hover {
+  color: transparent;
+}
+
+a.homeLinkAbout:hover:before, a.homeLinkAbout:hover:after {
+  font-size: 50px;
+  padding: 30px;
+  color: white;
+  content: attr(data-text);
+  position: absolute;
+  width: 180%;
+  height: 100%;
+  overflow: hidden;
+  margin-top: -35%;
+}
+
+a.homeLinkAbout:hover:before {
+  left: 3px;
+  text-shadow: -2px 0 red;
+  animation: glitch-1 2s linear infinite reverse;
+}
+
+a.homeLinkAbout:hover:after {
+  left: -3px;
+  text-shadow: -2px 0 blue;
+  animation: glitch-2 2s linear infinite reverse;
+}
+
+a.homeLinkProyects {
+  color: white;
+  text-decoration: none;
+  align-items: start;
+  margin-left: 58%;
+  margin-top: -3%;
+  margin-bottom: 20%;
+  font-family: 'VT323', monospace;
+}
+
+a.homeLinkProyects:hover {
+  color: transparent;
+ 
+}
+
+a.homeLinkProyects:hover:before, a.homeLinkProyects:hover:after {
+  font-size: 50px;
+  padding: 30px;
+  color: white;
+  content: attr(data-text);
+  position: absolute;
+  width: 180%;
+  height: 100%;
+  margin-top: -30%;
+  overflow: hidden;
+  margin-left: 40%;
+}
+
+a.homeLinkProyects:hover:before {
+  left: 3px;
+  text-shadow: -2px 0 red;
+  animation: glitch-1 2s linear infinite reverse;
+}
+
+a.homeLinkProyects:hover:after {
+  left: -3px;
+  text-shadow: -2px 0 blue;
+  animation: glitch-2 2s linear infinite reverse;
+}
+
+/* location '/' */
+
+a.landLinkAbout {
+  color: white;
+  text-decoration: none;
+  align-items: start;
+  margin-left: -1px;
+  margin-top: -35%;
+  font-family: 'VT323', monospace;
+}
+
+a.landLinkAbout:hover {
+  color: transparent;
+}
+
+a.landLinkAbout:hover:before, a.landLinkAbout:hover:after {
+  font-size: 50px;
+  padding: 30px;
+  color: white;
+  content: attr(data-text);
+  position: absolute;
+  width: 180%;
+  height: 100%;
+  margin-top: -40px;
+  overflow: hidden;
   
-   
-   font-size: 45px;
-   
+}
+
+a.landLinkAbout:hover:before {
+  left: 3px;
+  text-shadow: -2px 0 red;
+  animation: glitch-1 2s linear infinite reverse;
+}
+
+a.landLinkAbout:hover:after {
+  left: -3px;
+  text-shadow: -5px 0 blue;
+  animation: glitch-2 2s linear infinite reverse;
+}
+
+a.landLinkHome{
+  color: white;
+  text-decoration: none;
+  align-items: start;
+  margin-left: -1px;
+  margin-top: -45px;
+  font-family: 'VT323', monospace;
+}
+
+a.landLinkHome:hover {
+  color: transparent;
+}
+
+a.landLinkHome:hover:before, a.landLinkHome:hover:after {
+  font-size: 50px;
+  padding: 30px;
+  color: white;
+  content: attr(data-text);
+  position: absolute;
+  width: 180%;
+  height: 100%;
+  margin-top: -40px;
+  overflow: hidden;
+
+}
+
+a.landLinkHome:hover:before {
+  left: 3px;
+  text-shadow: -2px 0 red;
+  animation: glitch-1 2s linear infinite reverse;
+}
+
+a.landLinkHome:hover:after {
+  left: -3px;
+  text-shadow: -5px 0 blue;
+  animation: glitch-2 2s linear infinite reverse;
+}
+
+/* location '/about' */
+
+a.aboutNavLinkHome {
+  text-decoration: none;
+  color: white;
+
+  margin-bottom: auto;
+  margin-left: -1px;
+}
+
+a.aboutNavLinkHome:hover {
+  color: transparent;
+}
+
+a.aboutNavLinkHome:hover:before, a.aboutNavLinkHome:hover:after {
+  font-size: 50px;
+  padding: 30px;
+  color: white;
+  content: attr(data-text);
+  position: absolute;
+  width: 180%;
+  height: 100%;
+  margin-top: -40px;
+  overflow: hidden;
+ 
+}
+
+a.aboutNavLinkHome:hover:before {
+  left: 3px;
+  text-shadow: -2px 0 red;
+  animation: glitch-1 2s linear infinite reverse;
+}
+
+a.aboutNavLinkHome:hover:after {
+  left: -3px;
+  text-shadow: -5px 0 blue;
+  animation: glitch-2 2s linear infinite reverse;
+}
+
+a.aboutNavLinkContact {
+  text-decoration: none;
+  color: white;
+  margin-left: 42px;
+}
+
+a.aboutNavLinkContact:hover {
+  color: transparent;
+}
+
+a.aboutNavLinkContact:hover:before, a.aboutNavLinkContact:hover:after {
+  font-size: 50px;
+  padding: 30px;
+  color: white;
+  content: attr(data-text);
+  position: absolute;
+  width: 180%;
+  height: 100%;
+  margin-top: -40px;
+  overflow: hidden;
+  margin-left: 25%;
+}
+
+a.aboutNavLinkContact:hover:before {
+  left: 3px;
+  text-shadow: -2px 0 red;
+  animation: glitch-1 2s linear infinite reverse;
+}
+
+a.aboutNavLinkContact:hover:after {
+  left: -3px;
+  text-shadow: -5px 0 blue;
+  animation: glitch-2 2s linear infinite reverse;
+}
+
+/* location '/proyects' */
+
+a.proyectsLinkHome {
+  text-decoration: none;
+  color: white;
+  margin-top: -4%;
+  position: fixed;
+}
+
+a.proyectsLinkHome:hover {
+  color: transparent;
+}
+
+a.proyectsLinkHome:hover:before, a.proyectsLinkHome:hover:after {
+  font-size: 50px;
+  padding: 30px;
+  color: white;
+  content: attr(data-text);
+  position: absolute;
+  width: 180%;
+  height: 100%;
+  margin-top: -40px;
+  overflow: hidden;
+  margin-left: -42%;
+}
+
+a.proyectsLinkHome:hover:before {
+  left: 3px;
+  text-shadow: -2px 0 red;
+  animation: glitch-1 2s linear infinite reverse;
+}
+
+a.proyectsLinkHome:hover:after {
+  left: -3px;
+  text-shadow: -5px 0 blue;
+  animation: glitch-2 2s linear infinite reverse;
+}
+
+/* location '/contact' */
+
+a.contactNavLinkAb {
+  text-decoration: none;
+  color: white;
+  margin-top: -115px;
+}
+
+a.contactNavLinkAb:hover {
+  color: transparent;
+}
+
+a.contactNavLinkAb:hover:before, a.contactNavLinkAb:hover:after {
+  font-size: 50px;
+  padding: 30px;
+  color: white;
+  content: attr(data-text);
+  position: absolute;
+  width: 180%;
+  height: 100%;
+  margin-top: -40px;
+  overflow: hidden;
+ 
+}
+
+a.contactNavLinkAb:hover:before {
+  left: 3px;
+  text-shadow: -2px 0 red;
+  animation: glitch-1 2s linear infinite reverse;
+}
+
+a.contactNavLinkAb:hover:after {
+  left: -3px;
+  text-shadow: -5px 0 blue;
+  animation: glitch-2 2s linear infinite reverse;
+}
+
+@keyframes glitch-1 {
+  0% {
+    clip: rect(132px, auto, 101px, 30px);
+  }
+  5% {
+    clip: rect(17px, auto, 94px, 30px);
+  }
+  10% {
+    clip: rect(40px, auto, 66px, 30px);
+  }
+  15% {
+    clip: rect(87px, auto, 82px, 30px);
+  }
+  20% {
+    clip: rect(137px, auto, 61px, 30px);
+  }
+  25% {
+    clip: rect(34px, auto, 14px, 30px);
+  }
+  30% {
+    clip: rect(133px, auto, 74px, 30px);
+  }
+  35% {
+    clip: rect(76px, auto, 107px, 30px);
+  }
+  40% {
+    clip: rect(59px, auto, 130px, 30px);
+  }
+  45% {
+    clip: rect(29px, auto, 84px, 30px);
+  }
+  50% {
+    clip: rect(22px, auto, 67px, 30px);
+  }
+  55% {
+    clip: rect(67px, auto, 62px, 30px);
+  }
+  60% {
+    clip: rect(10px, auto, 105px, 30px);
+  }
+  65% {
+    clip: rect(78px, auto, 115px, 30px);
+  }
+  70% {
+    clip: rect(105px, auto, 13px, 30px);
+  }
+  75% {
+    clip: rect(15px, auto, 75px, 30px);
+  }
+  80% {
+    clip: rect(66px, auto, 39px, 30px);
+  }
+  85% {
+    clip: rect(133px, auto, 73px, 30px);
+  }
+  90% {
+    clip: rect(36px, auto, 128px, 30px);
+  }
+  95% {
+    clip: rect(68px, auto, 103px, 30px);
+  }
+  100% {
+    clip: rect(14px, auto, 100px, 30px);
+  }
+}
+
+@keyframes glitch-2 {
+  0% {
+    clip: rect(129px, auto, 36px, 30px);
+  }
+  5% {
+    clip: rect(36px, auto, 4px, 30px);
+  }
+  10% {
+    clip: rect(85px, auto, 66px, 30px);
+  }
+  15% {
+    clip: rect(91px, auto, 91px, 30px);
+  }
+  20% {
+    clip: rect(148px, auto, 138px, 30px);
+  }
+  25% {
+    clip: rect(38px, auto, 122px, 30px);
+  }
+  30% {
+    clip: rect(69px, auto, 54px, 30px);
+  }
+  35% {
+    clip: rect(98px, auto, 71px, 30px);
+  }
+  40% {
+    clip: rect(146px, auto, 34px, 30px);
+  }
+  45% {
+    clip: rect(134px, auto, 43px, 30px);
+  }
+  50% {
+    clip: rect(102px, auto, 80px, 30px);
+  }
+  55% {
+    clip: rect(119px, auto, 44px, 30px);
+  }
+  60% {
+    clip: rect(106px, auto, 99px, 30px);
+  }
+  65% {
+    clip: rect(141px, auto, 74px, 30px);
+  }
+  70% {
+    clip: rect(20px, auto, 78px, 30px);
+  }
+  75% {
+    clip: rect(133px, auto, 79px, 30px);
+  }
+  80% {
+    clip: rect(78px, auto, 52px, 30px);
+  }
+  85% {
+    clip: rect(35px, auto, 39px, 30px);
+  }
+  90% {
+    clip: rect(67px, auto, 70px, 30px);
+  }
+  95% {
+    clip: rect(71px, auto, 103px, 30px);
+  }
+  100% {
+    clip: rect(83px, auto, 40px, 30px);
+  }
 }
