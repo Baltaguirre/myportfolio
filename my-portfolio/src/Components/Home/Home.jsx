@@ -1,15 +1,17 @@
 import React from 'react';
 import Navbar from '../Navbar/Navbar.jsx'
 import './Home.css'
-import pixel from './pixelastronaut2.png'
+import pixel from '../../public/Home/pixelastronaut2.png'
 
-export default function Home() {
 
+export default function Home({ button,play, playNavbar}) {
+  
   return (
 
     <div className="containerHome">
-    
-   <Navbar/>
+    {button}
+   <Navbar
+   playNavbar={playNavbar}/>
 
       <div className='home'>
         <h2>Hello & welcome to my Portfolio!</h2>
@@ -17,7 +19,11 @@ export default function Home() {
         <p>In the /about section you'll find some information about me, my stack & also my contact channels. </p>
         <p>Hope you enjoy the little journey & thanks for passing by! </p> 
         </div>
-        <img src={pixel} alt='astronauta' />
+        <img 
+        clasName='astronaut_home'
+        src={pixel} 
+        alt='astronauta'
+        onClick={play} />
     </div>
   )
 }
