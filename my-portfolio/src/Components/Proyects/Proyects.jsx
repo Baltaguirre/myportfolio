@@ -56,7 +56,7 @@ export default function Proyects({ button, playProyects, playNavbar }) {
             );
           }} />
         <h3>Single Page Application made with <a href='https://www.geeksforgeeks.org/mern-stack/' target='blank'>MERN</a> Stack</h3>
-        <YoutubeEmbed embedId='H7XYrXQRVaI' />
+        {/* <YoutubeEmbed embedId='H7XYrXQRVaI' /> */}
       </div>
 
       <div className='proyectsTwo'>
