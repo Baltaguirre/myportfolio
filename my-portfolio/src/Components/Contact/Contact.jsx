@@ -10,15 +10,18 @@ import github from '../../public/Contact/github.png'
 export default function Contact({ button, playNavbar }){
     const gmailStyle = {
         height:'100%',
-        marginLeft:'15%'
+        width:'80%',
+        marginLeft:'6%'
     }
     const githubStyle = {
-        height:'150%',
-        marginLeft:'15%'
+        height:'130%',
+        width:'80%',
+        marginLeft:'5%'
     }
     const linkedinStyle = {
         height:'170%',
-        marginLeft:'15%'
+        width:'80%',
+        marginLeft:'5%'
     }
     return (
         <div className="containerContact">
@@ -29,9 +32,9 @@ export default function Contact({ button, playNavbar }){
                <a href="https://www.linkedin.com/in/baltasar-aguirre-fullstack/" target="blank">
                     <img src={linkedin} alt="linkedin" style={linkedinStyle}/>LinkedIn</a>
                     <a href="https://github.com/Baltaguirre" target="blank">
-                    <img src={github} alt="linkedin" style={githubStyle}/>GitHub</a>
+                    <img src={github} alt="github" style={githubStyle}/>GitHub</a>
                     <a  href="mailto:baltasar.aguirre@gmail.com" target="blank">
-                    <img src={gmail} alt="linkedin" style={gmailStyle}/>Gmail</a>
+                    <img src={gmail} alt="g-mail" style={gmailStyle}/>Gmail</a>
             </div>
         </div>
     )
