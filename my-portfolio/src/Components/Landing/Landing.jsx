@@ -12,6 +12,7 @@ export default function Landing({ button,play, play2,stop,playNavbar, stopNavbar
             <Navbar
             playNavbar={playNavbar}
             stopNavbar={stopNavbar} />
+            <div className='landingImage'>
             <img 
             src={pixel} 
             alt='astronauta' 
@@ -21,6 +22,7 @@ export default function Landing({ button,play, play2,stop,playNavbar, stopNavbar
             onMouseEnter={play2}
             onMouseLeave={stop}
          />
+         </div>
         </div>
     )
 }
