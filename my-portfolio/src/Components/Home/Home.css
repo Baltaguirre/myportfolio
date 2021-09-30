@@ -2,10 +2,10 @@
     width: 100vw;
     height: 100vh;
     background-image: url(../../public/moon.png);
-    background-size:cover;
+    background-size: cover;
     overflow: hidden;
-    -webkit-animation: backgroundScroll 25s linear infinite;
-    animation: backgroundScroll 25s linear infinite;
+    -webkit-animation: backgroundScroll 45s linear infinite;
+    animation: backgroundScroll 45s linear infinite;
 }
 
 @-webkit-keyframes backgroundScroll {
@@ -13,7 +13,7 @@
         background-position: 0 0;
     }
     to {
-        background-position: -800px 0;
+        background-position: -10000px -1000px;
     }
 }
 
@@ -22,7 +22,7 @@
         background-position: 0 0;
     }
     to {
-        background-position: -800px 0;
+        background-position: -10000px -1000px;
     }
 }
 
@@ -38,7 +38,6 @@
     margin-top: -2%;
     letter-spacing: 1px;
     text-decoration: none;
-
 }
 
 .containerHome ul {
@@ -59,25 +58,22 @@
     text-decoration: none;
 }
 
-
-
 .containerHome li {
     color: white;
     text-decoration: none;
     display: flex;
     flex-direction: column;
-    align-items:flex-end;
+    align-items: flex-end;
     letter-spacing: 1px;
     font-size: 45px;
     margin-top: -85%;
     margin-bottom: -5%;
     margin-left: -10%;
-    
 }
 
 .containerHome p {
     color: white;
-    margin-left:26%;
+    margin-left: 26%;
     margin-top: 25%;
     margin-bottom: -30%;
     text-align: center;
@@ -92,22 +88,23 @@
     margin-top: -11%;
     cursor: pointer;
 }
+
 .home {
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     border: 5px solid white;
-    padding:1%;
+    padding: 1%;
     margin-top: 1.7%;
     margin-bottom: 5%;
-    margin-left:40%;
+    margin-left: 40%;
     width: 50%;
-    height: 330px;
-    background-color:hsla(157, 50%, 25%, 0.329);
+    height: 53%;
+    background-color: hsla(157, 50%, 25%, 0.329);
 }
 
-.home h2{
+.home h2 {
     color: white;
     font-family: 'VT323', monospace;
     font-weight: normal;
@@ -115,15 +112,47 @@
     margin-left: 1%;
 }
 
-.home p{
-  margin-top: 2%;
-  margin-bottom: 5%;
-  margin-left: 2%;
-  margin-right: 2%;
+.home p {
+    margin-top: 2%;
+    margin-bottom: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
     color: white;
     font-family: 'VT323', monospace;
     font-size: 25px;
 }
-.astronaut_home{
+
+#astronaut_home {
     cursor: pointer;
+    width:100%;
+    height: 80%;
+    margin-top: 15%;
+    margin-left: 120%;
+}
+
+@media (min-width: 1440px) {
+    .containerHome {
+        background-size: 515%;
+        background-repeat: no-repeat;
+        background-image: url(../../public/moon2.png);
+    }
+    .home {
+        margin-top: 3%;
+        margin-bottom: 5%;
+        margin-left: 28%;
+        width: 65%;
+        height: 53%;
+    }
+  .home h2{
+      font-size: 2.5rem;
+  }
+  .home p {
+      font-size:2rem;
+  }
+  #astronaut_home {
+    margin-top: 1%;
+    margin-left: 100%;
+    width:110%;
+    height: 100%;
+}
 }
