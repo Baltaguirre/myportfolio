@@ -19,11 +19,13 @@ export default function Home({ button,play, playNavbar}) {
         <p>In the /about section you'll find some information about me, my stack & also my contact channels. </p>
         <p>Hope you enjoy the little journey & thanks for passing by! </p> 
         </div>
+        <div className='astronaut'>
         <img 
-        clasName='astronaut_home'
+        id='astronaut_home'
         src={pixel} 
         alt='astronauta'
         onClick={play} />
+        </div>
     </div>
   )
 }
