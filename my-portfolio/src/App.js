@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import useSound from "use-sound";
 
 import record from './public/App/welcome.mp3'
-import glitch from './public/App/signal-glitch.wav'
+import glitch from './public/App/digital_error.wav'
 import pixelSFX from './public/App/the-eagle-has-landed.mp3'
 import bounce from './public/App/bounce.wav';
 import computerSound from './public/App/little-robot-sound.mp3';
@@ -58,8 +58,10 @@ function App() {
   
   useEffect(() => {
     setActivateSound(JSON.parse(storage))
-   
+   console.log('USEEFFECT')
 }, [activateSound, storage])
+
+console.log('SETACTSOUND=>', activateSound)
 
   const speakerButton = () => {
       return (
@@ -86,7 +88,7 @@ function App() {
           playNavbar={playNavbar}
           stopNavbar={stopNavbar}
           stop={stop}
-          activateSound={activateSound} />
+          />
         </Route>
 
         <Route exact path="/home">
@@ -97,7 +99,7 @@ function App() {
            playNavbar={playNavbar}
            stopNavbar={stopNavbar}
            stop={stop}
-           activateSound={activateSound} />
+          />
         </Route>
 
         <Route  path="/proyects">
@@ -107,7 +109,7 @@ function App() {
            playNavbar={playNavbar}
           stopNavbar={stopNavbar}
            stop={stop}
-           activateSound={activateSound}/>
+           />
         </Route>
 
         <Route exact path="/about">
@@ -118,7 +120,7 @@ function App() {
            playNavbar={playNavbar}
           stopNavbar={stopNavbar}
            stop={stop}
-           activateSound={activateSound} />
+            />
         </Route>
 
         <Route exact path="/contact">
@@ -129,7 +131,7 @@ function App() {
            playNavbar={playNavbar}
           stopNavbar={stopNavbar}
            stop={stop}
-           activateSound={activateSound} />
+           />
         </Route>
 
         </Switch>
