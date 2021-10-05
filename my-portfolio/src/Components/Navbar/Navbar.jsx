@@ -102,7 +102,7 @@ export default function Nabvar({ playNavbar,stopNavbar }) {
                                         data-text='└/:about'
                                         onMouseEnter={playNavbar}
                                         onMouseLeave={stopNavbar}
-                                        onMouseClick={stopNavbar}>
+                                        >
                                         └/:about
                                     </Link>
                                     <li>│</li>
