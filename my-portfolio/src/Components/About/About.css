@@ -96,7 +96,7 @@ to {background-position: -800px 0;}
     margin-left:35%;
     border: 5px solid white;
     margin-top:2%;
-    width:50%;
+    width:45%;
     height:50%; 
     background-color: hsla(123, 46%, 28%, 0.329)
  }
@@ -104,7 +104,19 @@ to {background-position: -800px 0;}
  .stack{
      width: 80%;
      height: 50%;
+     animation: bounce 1.5s infinite alternate;
  }
+
+
+
+ @keyframes bounce {
+    from {
+      transform: translateY(-15px);
+    }
+    to {
+      transform: translateY(-45px);
+    }
+  }
  .astronaut{
     width: 25%;
     height: 60%;
