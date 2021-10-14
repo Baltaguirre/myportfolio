@@ -78,7 +78,7 @@
     margin-left: 45%;
     border: 5px solid white;
     width: 30%;
-    height: 60%;
+    height: 65%;
     background-color: hsla(157, 50%, 25%, 0.329);
 }
 
@@ -101,6 +101,18 @@
     padding: 1%;
     height: 10%;
     margin-left: 3%;
+}
+.contact a:hover {
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(-5px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
 }
 @media screen and (min-width:1400px) {
     .containerContact {
