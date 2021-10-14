@@ -20,123 +20,122 @@ import Contact from './Components/Contact/Contact'
 function App() {
 
   const [activateSound, setActivateSound] = useState(null);
-  const[playHome] = useSound(record,
+  const [playHome] = useSound(record,
     {
-      volume:0.5,
-    soundEnabled: activateSound,
-    playbackRate: 1.2,
-    })
-  const[playProyects]=useSound(computerSound, {
-    volume:0.1,
-    soundEnabled: activateSound,
-  }) 
-  const[playNavbar, {stopNavbar}] = useSound(glitch, {
-      volume:0.1,
+      volume: 0.5,
       soundEnabled: activateSound,
+      playbackRate: 1.2,
     })
-  const[play] = useSound(pixelSFX, {
-      volume:0.1,
-      soundEnabled: activateSound,
+  const [playProyects] = useSound(computerSound, {
+    volume: 0.1,
+    soundEnabled: activateSound,
   })
-  const[play2, {stop}] = useSound(bounce, {
-      volume:0.1,
-      soundEnabled: activateSound,
-      playbackRate: 0.7,
-     
+  const [playNavbar, { stopNavbar }] = useSound(glitch, {
+    volume: 0.1,
+    soundEnabled: activateSound,
+  })
+  const [play] = useSound(pixelSFX, {
+    volume: 0.1,
+    soundEnabled: activateSound,
+  })
+  const [play2, { stop }] = useSound(bounce, {
+    volume: 0.1,
+    soundEnabled: activateSound,
+    playbackRate: 0.7,
+
   })
   const storageSound = () => {
-      setActivateSound(!activateSound);
-      if (!activateSound) {
-          localStorage.setItem('activateSound', 'true')
-      } else {
-          localStorage.setItem('activateSound', 'false')
-      }
+    setActivateSound(!activateSound);
+    if (!activateSound) {
+      localStorage.setItem('activateSound', 'true')
+    } else {
+      localStorage.setItem('activateSound', 'false')
+    }
   }
 
   const storage = localStorage.getItem('activateSound');
- 
-  
+
+
   useEffect(() => {
     setActivateSound(JSON.parse(storage))
-   console.log('USEEFFECT')
-}, [activateSound, storage])
+  }, [storage])
 
-console.log('SETACTSOUND=>', activateSound)
+
 
   const speakerButton = () => {
-      return (
-          <button className='speaker' onClick={() => storageSound()}>
-             {  activateSound && JSON.parse(storage) ?
-                  <img src={speaker} alt='speaker' /> :
-                  <img src={speakerMute} alt='speaker muted' /> }
-          </button>
-      )
+    return (
+      <button className='speaker' onClick={() => storageSound()}>
+        {activateSound && JSON.parse(storage) ?
+          <img src={speaker} alt='speaker' /> :
+          <img src={speakerMute} alt='speaker muted' />}
+      </button>
+    )
   }
 
 
   return (
- 
+
     <Router>
 
-      <Switch> 
-    
+      <Switch>
+
         <Route exact path="/">
           <Landing
-          button={speakerButton()}
-          play={play}
-          play2={play2}
-          playNavbar={playNavbar}
-          stopNavbar={stopNavbar}
-          stop={stop}
+            button={speakerButton()}
+            play={play}
+            play2={play2}
+            playNavbar={playNavbar}
+            stopNavbar={stopNavbar}
+            stop={stop}
           />
         </Route>
 
         <Route exact path="/home">
-          <Home 
-           button={speakerButton()}
-           play={playHome}
-           play2={play2}
-           playNavbar={playNavbar}
-           stopNavbar={stopNavbar}
-           stop={stop}
+          <Home
+            button={speakerButton()}
+            play={playHome}
+            play2={play2}
+            playNavbar={playNavbar}
+            stopNavbar={stopNavbar}
+            stop={stop}
           />
         </Route>
 
-        <Route  path="/proyects">
-          <Proyects 
-           button={speakerButton()}
-           playProyects={playProyects}
-           playNavbar={playNavbar}
-          stopNavbar={stopNavbar}
-           stop={stop}
-           />
+        <Route path="/proyects">
+          <Proyects
+            button={speakerButton()}
+            playProyects={playProyects}
+            playNavbar={playNavbar}
+            stopNavbar={stopNavbar}
+            stop={stop}
+          />
         </Route>
 
         <Route exact path="/about">
           <About
-           button={speakerButton()}
-           play={play}
-           play2={play2}
-           playNavbar={playNavbar}
-          stopNavbar={stopNavbar}
-           stop={stop}
-            />
+            button={speakerButton()}
+            play={play}
+            play2={play2}
+            playNavbar={playNavbar}
+            stopNavbar={stopNavbar}
+            stop={stop}
+          />
         </Route>
 
         <Route exact path="/contact">
           <Contact
-           button={speakerButton()}
-           play={play}
-           play2={play2}
-           playNavbar={playNavbar}
-          stopNavbar={stopNavbar}
-           stop={stop}
-           />
+            button={speakerButton()}
+            play={play}
+            play2={play2}
+            playNavbar={playNavbar}
+            stopNavbar={stopNavbar}
+            stop={stop}
+          />
         </Route>
 
-        </Switch>
-      </Router>
-    
+      </Switch>
+    </Router>
+
   );
 }
 
