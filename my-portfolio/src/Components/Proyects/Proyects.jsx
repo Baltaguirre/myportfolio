@@ -46,7 +46,6 @@ export default function Proyects({ button, playProyects, playNavbar }) {
                       <br></br>
                       It has a shopping cart, wishlist, user login, user and administrator panel, discounts based on amounts and a small game to win more discounts!
                       <br></br>
-
                       <a href='https://la-montaner.vercel.app/' target='blank'>Here </a>
                       you can acces the app!
                     </p>
@@ -55,8 +54,7 @@ export default function Proyects({ button, playProyects, playNavbar }) {
               </Modal>
             );
           }} />
-        <h3>Single Page Application made with <a href='https://www.geeksforgeeks.org/mern-stack/' target='blank'>MERN</a> Stack</h3>
-        {/* <YoutubeEmbed embedId='H7XYrXQRVaI' /> */}
+        <h3>Single Page Application made with <a href='https://www.geeksforgeeks.org/mern-stack/' target='blank' id='mern'>MERN</a> Stack</h3>
       </div>
 
       <div className='proyectsTwo'>
@@ -89,7 +87,7 @@ export default function Proyects({ button, playProyects, playNavbar }) {
             );
           }} />
 
-        <h3>Single Page Application made with <a href='https://www.geeksforgeeks.org/what-is-pern-stack/' target='blank'>PERN</a> Stack</h3>
+        <h3>Single Page Application made with <a href='https://www.geeksforgeeks.org/what-is-pern-stack/' target='blank' id='pern'>PERN</a> Stack</h3>
         <YoutubeEmbed embedId='Hr_eKGernk4' />
       </div>
     </div>
