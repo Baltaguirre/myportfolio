@@ -4,7 +4,7 @@ import './Contact.css';
 import linkedin from '../../public/Contact/linkedin.png';
 import gmail from '../../public/Contact/gmail.png';
 import github from '../../public/Contact/github.png'
-import cv from '../../public/Contact/CV Aguirre Baltasar EN.pdf'
+import cv from '../../public/Contact/CV-Aguirre-Baltasar-EN.pdf'
 import cvpixel from '../../public/Contact/CV.png'
 
 export default function Contact({ button, playNavbar }){
